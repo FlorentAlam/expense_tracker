@@ -1,0 +1,15 @@
+input, select{
+    background: $grey_light;
+    border: 2px solid $grey_dark;
+}
+button{
+    background: $blue_light;
+    border: 2px solid $blue_dark;
+
+}
+input, select, button, option{
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border-radius: $borderRadius;
+    margin: 10px 0;
+}

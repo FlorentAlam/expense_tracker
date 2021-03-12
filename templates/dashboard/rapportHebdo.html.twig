@@ -1,0 +1,7 @@
+<div class="rapport-hebdo">
+    <h1>Rapport hebdomaire</h1>
+    <div class="rapport-hebdo-mainbar">
+        <div class="barre-hebdo barre-pos" data-value="{{ depenses|sign('pos', '-7days')}}"></div>
+        <div class="barre-hebdo barre-neg" data-value="{{ depenses|sign('neg', '-7days')}}"></div>
+    </div>
+</div>

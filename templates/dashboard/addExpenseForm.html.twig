@@ -1,0 +1,18 @@
+
+<div id="add-expense" class="add-expense--close">
+    <h1>Ajouter une opération</h1>
+    <button id="add-expense-toggler">+</button>
+    {{ form_start(newExpenseForm) }}
+        {{ form_row(newExpenseForm.montant, {
+            label: 'Montant'
+        }) }}
+        {{ form_row(newExpenseForm.date, {
+            label: 'Date de l\'opération'
+        }) }}
+        {{ form_row(newExpenseForm.categorie, {
+            label: 'Categorie'
+        }) }}
+        <span id="add-categorie-link">Ajouter une catégorie</span>
+        <button type="submit" class="btn">Ajouter</button>
+    {{ form_end(newExpenseForm) }}
+</div>

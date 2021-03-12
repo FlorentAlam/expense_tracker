@@ -1,0 +1,39 @@
+.rapport-hebdo{
+    padding: 20px;
+    &-mainbar{
+        background: $grey_light;
+        height: 10px;
+        border-radius: 15px;
+        border: 1px solid $grey_dark;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .barre-pos, .barre-neg{
+            height: 100%;
+            transform: scaleX(0);
+            animation-duration: .7s;
+            animation-timing-function: ease-out;
+            animation-name: posScale;
+            animation-fill-mode: forwards;
+        }
+        .barre-pos{
+            background: $blue_light;
+            border: 1px solid $blue_dark;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            transform-origin: left;
+        }
+        .barre-neg{
+            background: $orange_light;
+            border: 1px solid $orange_dark;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            transform-origin: right;
+        }
+    }
+}
+
+@keyframes posScale{
+    0%{ transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
