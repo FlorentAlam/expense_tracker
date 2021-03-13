@@ -8,10 +8,26 @@ class Popup{
         this.categorieButton = document.getElementById('add-categorie-toggler');
         this.categorieContainer = document.getElementById('add-categorie');
 
+        this.closeButton = document.getElementsByClassName('close_button');
+
         this.addEvents();
     }
 
     addEvents(){
+        for(const button of this.closeButton){
+            button.addEventListener('click', () => {
+                this.isCategorieOpen = false;
+                this.isExpenseOpen = false;
+    
+                this.expenseContainer.classList.add('add-expense--close');
+                this.expenseContainer.classList.remove('add-expense--open');
+    
+                this.categorieContainer.classList.add('add-categorie--close');
+                this.categorieContainer.classList.remove('add-categorie--open'); 
+            })
+        }
+        
+
         this.expenseButton.addEventListener('click', () => {
             this.isExpenseOpen = !this.isExpenseOpen;
             this.expenseContainer.classList.add(this.isExpenseOpen ? 'add-expense--open' : 'add-expense--close');

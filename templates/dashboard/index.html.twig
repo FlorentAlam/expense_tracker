@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DashboardController!{% endblock %}
+{% block title %}Tableau de bord{% endblock %}
 
 {% block body %}
-
+    {% include 'dashboard/addButtons.html.twig' %}
     {% include 'dashboard/addExpenseForm.html.twig' with {'newExpenseForm': newExpenseForm} %}
     {% include 'dashboard/addCategorieForm.html.twig' with {'newCategorieForm': newCategorieForm} %}
     {% include 'dashboard/rapportHebdo.html.twig' with {'depenses': depenses} %}

@@ -1,5 +1,9 @@
 .rapport-hebdo{
     padding: 20px;
+    padding-top: 0;
+    h1{
+        margin: 0 0 10px 0;
+    }
     &-mainbar{
         background: $grey_light;
         height: 10px;

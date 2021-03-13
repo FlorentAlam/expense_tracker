@@ -1,6 +1,24 @@
+.addButtons{
+    display: flex;
+    padding: 20px;
+    padding-bottom: 0;
+    button{
+        margin-right: 10px;
+    }
+}
+#add-expense, #add-categorie{
+    &-toggler{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 #add-expense, #add-categorie{
     background: white;
     position: fixed;
+    z-index: 10;
     height: 100vh;
     width: 100%;
     max-width: 300px;
@@ -13,16 +31,6 @@
     h1{
         text-align: center;
     }
-    &-toggler{
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        top: 0;
-        font-size: 26px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     form{
         display: flex;
         flex-direction: column;
@@ -31,13 +39,17 @@
             flex-direction: column;
         }
     }
+    .close_button{
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
 }
 #add-expense{
     box-shadow: 3px 0px 12px 2px rgba(0, 0, 0, .05);
     left: 0;
     &-toggler{
         color: $blue_dark;
-        right: -42px;
     }
 }
 
@@ -46,9 +58,6 @@
     box-shadow: -3px 0px 12px 2px rgba(0, 0, 0, .05);
     &-toggler{
         color: $orange_dark;
-        left: -42px;
-    }
-    button{
         background: $orange_light;
         border-color: $orange_dark;
     }
