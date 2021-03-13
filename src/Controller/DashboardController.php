@@ -69,7 +69,8 @@ class DashboardController extends AbstractController
         return $this->render('dashboard/index.html.twig', [
             'newExpenseForm' => $newExpenseForm->createView(),
             'newCategorieForm' => $newCategorieForm->createView(),
-            'depenses' => $depenses
+            'depenses' => $depenses,
+            'categories' => $categories
         ]);
     }
 }

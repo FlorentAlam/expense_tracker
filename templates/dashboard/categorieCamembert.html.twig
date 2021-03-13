@@ -1,0 +1,18 @@
+<div id="categorieCamembert">
+    <div class="fieldset">
+        <label for="debut">Début</label>
+        <input name="debut" id="debut" type="date"/>
+    </div>
+    <div class="fieldset">
+        <label for="fin">Fin</label>
+        <input name="fin" id="fin" type="date"/>
+    </div>
+    <div class="fieldset">
+        <label for="categorie">Catégorie</label>
+        <select name="categorie" id="categorie">
+            {% for categorie in categories %}
+                <option>{{ categorie.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
