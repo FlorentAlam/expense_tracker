@@ -13,3 +13,9 @@ input, select, button, option{
     border-radius: $borderRadius;
     margin: 10px 0;
 }
+
+hr{
+    width: calc(100vw - 40px);
+    border-bottom: none;
+    opacity: .2;
+}

@@ -4,6 +4,31 @@
     h1{
         margin: 0 0 10px 0;
     }
+    .barre-hebdo{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-marqueur{
+            height: 24px;
+            width: 24px;
+            border-radius: 12px;
+            position: absolute;
+            right: -12px;
+            z-index: 4;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &__inner{
+                width: 10px;
+                height: 10px;
+                border-radius: 6px;
+                background: $blue_light;
+                border: 1px solid $blue_dark;
+            }
+        }
+    }
     &-mainbar{
         background: $grey_light;
         height: 10px;
@@ -15,17 +40,33 @@
         .barre-pos, .barre-neg{
             height: 100%;
             transform: scaleX(0);
-            animation-duration: .7s;
-            animation-timing-function: ease-out;
+            animation-duration: .6s;
+            animation-timing-function: ease-in-out;
             animation-name: posScale;
             animation-fill-mode: forwards;
+            span{
+                position: absolute;
+                bottom: -17px;
+                font-weight: bold;
+                font-size: 12px;
+                opacity: 0;
+                animation-delay: .6s;
+                animation-duration: .2s;
+                animation-fill-mode: forwards;
+                animation-timing-function: ease-in-out;
+                animation-name: figureDisplay;
+            }
         }
         .barre-pos{
+            z-index: 4;
             background: $blue_light;
             border: 1px solid $blue_dark;
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
             transform-origin: left;
+            span{
+                left: 0;
+            }
         }
         .barre-neg{
             background: $orange_light;
@@ -33,6 +74,9 @@
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             transform-origin: right;
+            span{
+                right: 0;
+            }
         }
     }
 }
@@ -40,4 +84,9 @@
 @keyframes posScale{
     0%{ transform: scaleX(0); }
     100% { transform: scaleX(1); }
+}
+
+@keyframes figureDisplay{
+    0% { opacity: 0; }
+    100% { opacity: .5; }
 }
